@@ -1,14 +1,13 @@
-﻿using Common.Domain.CustomExceptions;
+﻿using Common.Domain.Base;
+using Common.Domain.CustomExceptions;
+using Common.Domain.Interfaces;
+using Common.Domain.Model;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Net;
-using Newtonsoft.Json;
-using Common.Domain.Model;
 using System.Linq;
-using Common.Domain.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-using Common.Domain.Base;
-using Microsoft.Extensions.Logging;
+using System.Net;
 
 namespace Common.API
 {

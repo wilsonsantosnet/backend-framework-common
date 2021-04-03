@@ -2,7 +2,6 @@ using Common.Domain.Base;
 using Common.Domain.Interfaces;
 using Common.Domain.Serialization;
 using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
 using StackExchange.Redis;
 using System;
 using System.Text;

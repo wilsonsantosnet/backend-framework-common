@@ -1,6 +1,5 @@
 ﻿using Common.Domain;
 using IdentityModel.Client;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
