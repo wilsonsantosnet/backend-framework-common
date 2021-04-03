@@ -177,7 +177,7 @@ namespace Common.Cache
                 return default(T);
 
             string resultJson = Encoding.UTF8.GetString(value);
-            var resultObject = JsonConvert.DeserializeObject<T>(resultJson);
+            var resultObject = System.Text.Json.JsonSerializer.Deserialize<T>(resultJson);
             return resultObject;
         }
 

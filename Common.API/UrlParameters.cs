@@ -40,7 +40,7 @@ namespace Common.Api
 
         public QueryStringParameter AddToType<T>(string name, T value) where T : class
         {
-            return this.Add(name, JsonConvert.SerializeObject(value, Formatting.None));
+            return this.Add(name, System.Text.Json.JsonSerializer.Serialize(value));
         }
 
 

@@ -287,7 +287,7 @@ namespace Common.API
             var erroMessage = ex.Message;
             if (model.IsNotNull())
             {
-                var modelSerialization = JsonConvert.SerializeObject(model);
+                var modelSerialization = System.Text.Json.JsonSerializer.Serialize(model);
                 erroMessage = string.Format("[{0}] - {1} - [{2}]", appName, ex.Message, modelSerialization);
             }
             result = ExceptionWithInner(ex, appName);

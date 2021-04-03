@@ -13,7 +13,7 @@ namespace Common.Domain.Serialization
         public static byte[] ToBytes(this object value)
         {
 
-            var resultJson = JsonConvert.SerializeObject(value);
+            var resultJson = System.Text.Json.JsonSerializer.Serialize(value);
             var resultBytes = Encoding.UTF8.GetBytes(resultJson);
 
             return resultBytes;
@@ -24,7 +24,7 @@ namespace Common.Domain.Serialization
         {
 
             string resultJson = Encoding.UTF8.GetString(value);
-            var resultObject = JsonConvert.DeserializeObject(resultJson);
+            var resultObject = System.Text.Json.JsonSerializer.Deserialize<object>(resultJson);
             return resultObject;
 
         }
@@ -35,7 +35,7 @@ namespace Common.Domain.Serialization
                 return default(T);
 
             string resultJson = Encoding.UTF8.GetString(value);
-            var resultObject = JsonConvert.DeserializeObject<T>(resultJson);
+            var resultObject = System.Text.Json.JsonSerializer.Deserialize<T>(resultJson);
             return resultObject;
 
         }
