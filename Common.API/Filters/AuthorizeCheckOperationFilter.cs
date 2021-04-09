@@ -1,9 +1,6 @@
-using IdentityModel.Client;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
@@ -36,3 +33,4 @@ namespace Common.API
         }
     }
 }
+
